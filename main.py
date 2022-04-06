@@ -65,7 +65,8 @@ async def root_getid():
 async def send_notification(details:biodata):
     _info =f"Name: {details.name} \nPhone number: {details.phonenumber} \nEmail: {details.email} \nAddress: {details.address} \nCourse: {details.course}"
     
-    test= requests.get(f"https://api.telegram.org/{key}/sendMessage?chat_id=589503354&text={_info}")
+    test= requests.get(f"https://api.telegram.org/{key}/sendMessage?chat_id=1448301206&text={_info}")
+    #test= requests.get(f"https://api.telegram.org/{key}/sendMessage?chat_id=589503354&text={_info}")
     rf = json.loads(test.content)
     return (rf)
 
